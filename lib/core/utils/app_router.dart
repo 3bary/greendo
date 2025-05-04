@@ -20,6 +20,7 @@ import '../../features/user_preferences/data/repos/user_preferences_repo.dart';
 import '../../features/user_preferences/presentation/views/preferences_view.dart';
 import '../models/place_model.dart';
 
+
 abstract class AppRouter {
   static const String kLoginView = '/loginView';
   static const String kSignupView = '/signupView';
@@ -31,6 +32,7 @@ abstract class AppRouter {
   static const String kRecommendationView = '/recommendationView';
   static const String kPlaceDetailsView = '/placeDetailsView';
   static const String kRoadMapView = '/roadMapView';
+  static const String kSettingsView='/settingsView';
 
   static final router = GoRouter(
     initialLocation: '/',
@@ -57,7 +59,6 @@ abstract class AppRouter {
           ),
         ],
       ),
-
       GoRoute(
         path: kPreferencesView,
         builder: (context, state) => BlocProvider(
@@ -95,7 +96,11 @@ abstract class AppRouter {
         path: kRecommendationView,
         builder: (context, state) => const RecommendationView(),
       ),
-      GoRoute(path: kRoadMapView, builder: (context, state) => RoadMapView()),
+      GoRoute(
+        path: kRoadMapView,
+        builder: (context, state) => RoadMapView(),
+      ),
+
     ],
   );
 }

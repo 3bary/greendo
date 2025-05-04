@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:greendo/features/profile/presentation/views/widgets/profile_view_body.dart';
 import 'package:greendo/features/profile/presentation/views/widgets/profile_header.dart';
+import 'package:greendo/features/profile/presentation/views/widgets/profile_view_body.dart';
+
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -23,7 +24,7 @@ class _ProfileViewState extends State<ProfileView> {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.fromLTRB(13, 50, 13, 3),
+          padding: const EdgeInsets.fromLTRB(13, 65, 13, 3),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
